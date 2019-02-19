@@ -17,7 +17,7 @@ function setup() {
 var sizeOffset = 0.5//0.5;
 var speedUp = 1;
 var speedDown = 5;
-var planetOff = 1//6;
+var planetOff = 6//6;
 var sunSize = 15 / (sizeOffset);
 var dataSheetObj = [
   {
@@ -97,7 +97,10 @@ function draw() {
         zoomAmt-=5
       }
     }
-  translate(mouseX-width/2,mouseY-width/2,-zoomAmt)
+  translate(mouseX-width/2,mouseY-height/2,-zoomAmt)
+  //translate(0,0,-zoomAmt)
+  //rotateY(map(mouseX-width/2,-width/2,width/2,0,360))
+  //rotateX(map(mouseY-height/2,-height/2,height/2,0,360))
   background(0,0,0);
     for(var count = 0; count < starPoses.length;count++){
       push();
